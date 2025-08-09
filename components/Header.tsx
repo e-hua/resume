@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "@/components/Nav";
+import MobileNav from "@/components/MobileNav";
 
 export default function Header() {
   return (
@@ -11,7 +12,9 @@ export default function Header() {
           <Nav />
           {/* Shows the header under mobile mode */}
         </div>
-        <div className="md:hidden"> Mobile Nav</div>
+        <div className="md:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
