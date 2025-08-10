@@ -93,7 +93,7 @@ export default function resume() {
               <div className="flex flex-col gap-[30px] text-center md:text-left">
                 <h3 className="text-4xl font-bold">{education.title} </h3>
 
-                <ScrollArea className="h-[300px]">
+                <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 gap-[30px]">
                     {education.items.map((item, idx) => {
                       return (
