@@ -14,10 +14,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { easeIn, motion } from "framer-motion";
-import { li } from "framer-motion/client";
 import { TooltipProvider, Tooltip } from "@/components/ui/tooltip";
 import { TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
-import { Certificate } from "crypto";
 import Certificates from "@/components/Certificates";
 import Projects from "@/components/Projects";
 

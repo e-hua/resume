@@ -10,17 +10,24 @@ export default function Home() {
           <div className="text-center md:text-left">
             <span> NUS Y2 CS undergraduate</span>
             <h1 className="mt-4 mb-4">
-              Hi ! I'm <br /> <span className="text-accent"> Chen Guanhua</span>
+              Hi ! I&apos;m <br />{" "}
+              <span className="text-accent"> Chen Guanhua</span>
             </h1>
             <p className="mb-4">
               Currently specializing in Software Engineering, with a strong
               academic track record and hands-on project experience.
             </p>
             <div className="flex flex-col md:flex-row items-center gap-8">
-              <Button variant="outline" size="lg">
-                <span> Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a
+                href="/assets/Chen_Guanhua_Resume.pdf"
+                download
+                className="btn"
+              >
+                <Button variant="outline" size="lg">
+                  <span> Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <span>
                 {" "}
                 <Socials
