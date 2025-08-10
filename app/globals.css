@@ -129,4 +129,10 @@
   h3 {
     @apply text-[20px] md:text-[24px] leading-[1.1] font-semibold;
   }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  .group:hover .text-outline {
+    -webkit-text-stroke: 1px #4b4fcc;
+  }
 }
