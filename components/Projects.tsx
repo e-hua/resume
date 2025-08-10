@@ -48,7 +48,8 @@ const apps = [
     num: "02",
     title: "My resume",
     category: "Resume",
-    description: "",
+    description:
+      "An interactive, responsive online resume built with React (Next.js), TypeScript, Tailwind CSS, and Shadcn/UI, featuring clean design and smooth user experience to showcase my skills and projects.",
     techStack: [
       { name: "React (Next.js)" },
       { name: "TypeScript" },
@@ -76,13 +77,13 @@ export default function Projects() {
         opacity: 1,
         transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 md:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row md:gap-[30px] ">
+      <div className="container mx-10">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px] ">
           <div
-            className="w-full md:w-[50%] md:h-[460px] flex flex-col
-          md:justify-between order-2 md:order-none"
+            className="w-full xl:w-[50%] xl:h-[460px] flex flex-col justify-center
+          xl:justify-between order-2 xl:order-none"
           >
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* App Index */}
@@ -143,11 +144,11 @@ export default function Projects() {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[50%]">
+          <div className="w-full xl:w-[50%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="md:h-[520px] mb-12"
+              className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
               {apps.map((app, idx) => {

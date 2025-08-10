@@ -23,7 +23,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function academics() {
+export default function Certificates() {
   return (
     <section className="flex flex-col justify-center min-h-[80vh] py-12 md:py-0">
       <div className="container mx-auto">

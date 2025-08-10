@@ -17,6 +17,9 @@ import { easeIn, motion } from "framer-motion";
 import { li } from "framer-motion/client";
 import { TooltipProvider, Tooltip } from "@/components/ui/tooltip";
 import { TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
+import { Certificate } from "crypto";
+import Certificates from "@/components/Certificates";
+import Projects from "@/components/Projects";
 
 const education = {
   title: "My Education",
@@ -76,21 +79,22 @@ export default function resume() {
         opacity: 1,
         transition: { delay: 0.4, duration: 0.4, ease: easeIn },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-2 md:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-2 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="education"
-          className="flex flex-col md:flex-row gap-[60px]"
+          className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto md:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="education"> Education </TabsTrigger>
             <TabsTrigger value="skills"> Skills </TabsTrigger>
             <TabsTrigger value="projects"> Projects </TabsTrigger>
+            <TabsTrigger value="certificates"> Certificates </TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center md:text-left">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title} </h3>
 
                 <ScrollArea className="h-[400px]">
@@ -101,10 +105,10 @@ export default function resume() {
                           key={idx}
                           className="bg-[#232329] py-6 px-10 rounded-xl 
                           flex flex-col justify-center 
-                          items-center md:items-start gap-1"
+                          items-center xl:items-start gap-1"
                         >
                           <h3 className="text-accent"> {item.description} </h3>
-                          <p className="max-w-[600px] text-white/60 mx-auto md:mx-0">
+                          <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                             {" "}
                             {item.Degree}
                           </p>
@@ -123,7 +127,7 @@ export default function resume() {
             </TabsContent>
 
             <TabsContent value="skills" className="w-full h-full">
-              <h3 className="text-4xl font-bold text-center md:text-left">
+              <h3 className="text-4xl font-bold text-center xl:text-left">
                 My Skills{" "}
               </h3>
               <div className="flex flex-col gap-[30px]">
@@ -163,8 +167,12 @@ export default function resume() {
               </div>
             </TabsContent>
 
-            <TabsContent value="projects" className="w-full">
-              projects
+            <TabsContent value="projects" className="w-175">
+              <Projects />
+            </TabsContent>
+
+            <TabsContent value="certificates" className="w-full h-full">
+              <Certificates />
             </TabsContent>
           </div>
         </Tabs>
